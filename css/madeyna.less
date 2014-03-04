@@ -9,7 +9,7 @@
     only screen and (                min-resolution: 192dpi),
     only screen and (                min-resolution: 2dppx) {
         background-image: url("@{file-2x}");
-        background-size: @width-1x @height-1x;
+        background-size: @width-1x @height-1x !important;
     }
 }
 
@@ -54,9 +54,16 @@
     filter: ~"alpha(opacity=@{opacity-ie})";
 }
 
-@page-width: 1000px;
-@page-height: 1400px;
+@page-width: 800px;
+@page-height: 1128px;
 @viewport-padding: 50px;
+
+@page-width-wo-unit: unit(@page-width);
+@page-height-wo-unit: unit(@page-height);
+@page-width-2x-wo-unit: unit(@page-width * 2);
+@page-height-2x-wo-unit: unit(@page-height * 2);
+@holderjs-option: "@{page-width-wo-unit}x@{page-height-wo-unit}";
+@holderjs-option-2x: "@{page-width-2x-wo-unit}x@{page-height-2x-wo-unit}";
 
 html {
     height: 100%;
@@ -160,27 +167,27 @@ body {
                 position: absolute;
                 &.page-1 {
                     left: 0;
-                    .img-retina("?holder.js/1000x1400/text:Page 1", "?holder.js/2000x2800/text:Page 1", @page-width, @page-height);
+                    .img-retina("?holder.js/@{holderjs-option}/text:Page 1", "?holder.js/@{holderjs-option-2x}/text:Page 1", @page-width, @page-height);
                 }
                 &.page-2 {
                     left: 0;
-                    .img-retina("?holder.js/1000x1400/sky/text:Page 2", "?holder.js/2000x2800/sky/text:Page 2", @page-width, @page-height);
+                    .img-retina("?holder.js/@{holderjs-option}/sky/text:Page 2", "?holder.js/@{holderjs-option-2x}/sky/text:Page 2", @page-width, @page-height);
                 }
                 &.page-3 {
                     left: @page-width;
-                    .img-retina("?holder.js/1000x1400/text:Page 3", "?holder.js/2000x2800/text:Page 3", @page-width, @page-height);
+                    .img-retina("?holder.js/@{holderjs-option}/text:Page 3", "?holder.js/@{holderjs-option-2x}/text:Page 3", @page-width, @page-height);
                 }
                 &.page-4 {
                     left: @page-width * 2;
-                    .img-retina("?holder.js/1000x1400/vine/text:Page 4", "?holder.js/2000x2800/vine/text:Page 4", @page-width, @page-height);
+                    .img-retina("?holder.js/@{holderjs-option}/vine/text:Page 4", "?holder.js/@{holderjs-option-2x}/vine/text:Page 4", @page-width, @page-height);
                 }
                 &.page-5 {
                     left: 0;
-                    .img-retina("?holder.js/1000x1400/text:Page 5", "?holder.js/2000x2800/text:Page 5", @page-width, @page-height);
+                    .img-retina("?holder.js/@{holderjs-option}/text:Page 5", "?holder.js/@{holderjs-option-2x}/text:Page 5", @page-width, @page-height);
                 }
                 &.page-6 {
                     left: @page-width;
-                    .img-retina("?holder.js/1000x1400/sky/text:Page 6", "?holder.js/2000x2800/sky/text:Page 6", @page-width, @page-height);
+                    .img-retina("?holder.js/@{holderjs-option}/sky/text:Page 6", "?holder.js/@{holderjs-option-2x}/sky/text:Page 6", @page-width, @page-height);
                 }
             }
             
