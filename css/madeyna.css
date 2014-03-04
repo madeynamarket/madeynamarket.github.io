@@ -85,12 +85,12 @@ body {
 }
 #viewport .pages {
   top: 0;
-  width: 5000px;
-  height: 1228px;
+  width: 4808px;
+  height: 1188px;
   position: absolute;
 }
 #viewport .pages .page-spread {
-  height: 1128px;
+  height: 1088px;
   top: 50px;
   position: absolute;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
@@ -101,69 +101,69 @@ body {
   transition: opacity 0.5s;
 }
 #viewport .pages .page-spread .page {
-  width: 800px;
-  height: 1128px;
+  width: 768px;
+  height: 1088px;
   top: 0;
   position: absolute;
 }
 #viewport .pages .page-spread .page.page-1 {
   left: 0;
-  background-image: url("?holder.js/800x1128/text:Page 1");
+  background-image: url("?holder.js/768x1088/text:Page 1");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-1 {
-    background-image: url("?holder.js/1600x2256/text:Page 1");
-    background-size: 800px 1128px !important;
+    background-image: url("?holder.js/1536x2176/text:Page 1");
+    background-size: 768px 1088px !important;
   }
 }
 #viewport .pages .page-spread .page.page-2 {
   left: 0;
-  background-image: url("?holder.js/800x1128/sky/text:Page 2");
+  background-image: url("?holder.js/768x1088/sky/text:Page 2");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-2 {
-    background-image: url("?holder.js/1600x2256/sky/text:Page 2");
-    background-size: 800px 1128px !important;
+    background-image: url("?holder.js/1536x2176/sky/text:Page 2");
+    background-size: 768px 1088px !important;
   }
 }
 #viewport .pages .page-spread .page.page-3 {
-  left: 800px;
-  background-image: url("?holder.js/800x1128/text:Page 3");
+  left: 768px;
+  background-image: url("?holder.js/768x1088/text:Page 3");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-3 {
-    background-image: url("?holder.js/1600x2256/text:Page 3");
-    background-size: 800px 1128px !important;
+    background-image: url("?holder.js/1536x2176/text:Page 3");
+    background-size: 768px 1088px !important;
   }
 }
 #viewport .pages .page-spread .page.page-4 {
-  left: 1600px;
-  background-image: url("?holder.js/800x1128/vine/text:Page 4");
+  left: 1536px;
+  background-image: url("?holder.js/768x1088/vine/text:Page 4");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-4 {
-    background-image: url("?holder.js/1600x2256/vine/text:Page 4");
-    background-size: 800px 1128px !important;
+    background-image: url("?holder.js/1536x2176/vine/text:Page 4");
+    background-size: 768px 1088px !important;
   }
 }
 #viewport .pages .page-spread .page.page-5 {
   left: 0;
-  background-image: url("?holder.js/800x1128/text:Page 5");
+  background-image: url("?holder.js/768x1088/text:Page 5");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-5 {
-    background-image: url("?holder.js/1600x2256/text:Page 5");
-    background-size: 800px 1128px !important;
+    background-image: url("?holder.js/1536x2176/text:Page 5");
+    background-size: 768px 1088px !important;
   }
 }
 #viewport .pages .page-spread .page.page-6 {
-  left: 800px;
-  background-image: url("?holder.js/800x1128/sky/text:Page 6");
+  left: 768px;
+  background-image: url("?holder.js/768x1088/sky/text:Page 6");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-6 {
-    background-image: url("?holder.js/1600x2256/sky/text:Page 6");
-    background-size: 800px 1128px !important;
+    background-image: url("?holder.js/1536x2176/sky/text:Page 6");
+    background-size: 768px 1088px !important;
   }
 }
 #viewport .pages .page-spread.fadeIn {
@@ -171,16 +171,16 @@ body {
   filter: alpha(opacity=100);
 }
 #viewport .pages .page-spread.page-spread-1 {
-  width: 800px;
+  width: 768px;
   left: 50px;
 }
 #viewport .pages .page-spread.page-spread-2 {
-  width: 2400px;
-  left: 900px;
+  width: 2304px;
+  left: 868px;
 }
 #viewport .pages .page-spread.page-spread-3 {
-  width: 1600px;
-  left: 3350px;
+  width: 1536px;
+  left: 3222px;
 }
 #dlBtnWrapper {
   z-index: 50;
