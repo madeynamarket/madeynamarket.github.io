@@ -1,0 +1,214 @@
+.img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
+    background-image: url("@{file-1x}");
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+        background-image: url("@{file-2x}");
+        background-size: @width-1x @height-1x;
+    }
+}
+
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+    -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+    box-shadow: @shadow;
+}
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+    transition: @transition;
+}
+.transition-property(@transition-property) {
+    -webkit-transition-property: @transition-property;
+    transition-property: @transition-property;
+}
+.transition-delay(@transition-delay) {
+    -webkit-transition-delay: @transition-delay;
+    transition-delay: @transition-delay;
+}
+.transition-duration(@transition-duration) {
+    -webkit-transition-duration: @transition-duration;
+    transition-duration: @transition-duration;
+}
+.transition-transform(@transition) {
+    -webkit-transition: -webkit-transform @transition;
+    -moz-transition: -moz-transform @transition;
+    -o-transition: -o-transform @transition;
+    transition: transform @transition;
+}
+
+.translate(@x; @y) {
+    -webkit-transform: translate3d(@x, @y, 0);
+    -ms-transform: translate(@x, @y); // IE9 only
+    transform: translate(@x, @y);
+}
+
+.opacity(@opacity) {
+    opacity: @opacity;
+    // IE8 filter
+    @opacity-ie: (@opacity * 100);
+    filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+@page-width: 1000px;
+@page-height: 1400px;
+@viewport-padding: 50px;
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#mainVisual {
+    z-index: 100;
+    .img-retina("?holder.js/1400x400/vine/text:Madeyna Market", "?holder.js/2800x800/vine/text:Madeyna Market", 1400, 400);
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    .transition-transform(0.5s ease-in);
+
+    header {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+
+        h1 {
+            position: relative;
+            top: -1em;
+            height: 2em;
+            line-height: 2em;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    &.slideUp {
+        .translate(0, -100%);
+    }
+}
+
+#buttons {
+    z-index: 100;
+    background-color: white;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    .transition-transform(0.5s ease-in);
+
+    & > div {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        text-align: center;
+
+        & > div {
+            position: relative;
+            top: -17px;
+            height: 34px;
+        }
+    }
+
+    &.slideDown {
+        .translate(0, 100%);
+    }
+}
+
+#viewport {
+    z-index: 0;
+    display: none;
+
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    .pages {
+        top: 0;
+        width: @page-width * 6 + @viewport-padding * 4;
+        height: @page-height + @viewport-padding * 2;
+        position: absolute;
+
+        .page-spread {
+            height: @page-height;
+            top: @viewport-padding;
+            position: absolute;
+            .box-shadow(0 2px 6px rgba(0,0,0,.25));
+            .opacity(0);
+            .transition(opacity 0.5s);
+
+            .page {
+                width: @page-width;
+                height: @page-height;
+                top: 0;
+                position: absolute;
+                &.page-1 {
+                    left: 0;
+                    .img-retina("?holder.js/1000x1400/sky/text:Page 1", "?holder.js/2000x2800/sky/text:Page 1", @page-width, @page-height);
+                }
+                &.page-2 {
+                    left: 0;
+                    .img-retina("?holder.js/1000x1400/lava/text:Page 2", "?holder.js/2000x2800/lava/text:Page 2", @page-width, @page-height);
+                }
+                &.page-3 {
+                    left: @page-width;
+                    .img-retina("?holder.js/1000x1400/vine/text:Page 3", "?holder.js/2000x2800/vine/text:Page 3", @page-width, @page-height);
+                }
+                &.page-4 {
+                    left: @page-width * 2;
+                    .img-retina("?holder.js/1000x1400/industrial/text:Page 4", "?holder.js/2000x2800/industrial/text:Page 4", @page-width, @page-height);
+                }
+                &.page-5 {
+                    left: 0;
+                    .img-retina("?holder.js/1000x1400/social/text:Page 5", "?holder.js/2000x2800/social/text:Page 5", @page-width, @page-height);
+                }
+                &.page-6 {
+                    left: @page-width;
+                    .img-retina("?holder.js/1000x1400/sky/text:Page 6", "?holder.js/2000x2800/sky/text:Page 6", @page-width, @page-height);
+                }
+            }
+            
+            &.fadeIn {
+                .opacity(1);
+            }
+
+            &.page-spread-1 {
+                width: @page-width;
+                left: @viewport-padding;
+            }
+            &.page-spread-2 {
+                width: @page-width * 3;
+                left: @page-width + @viewport-padding * 2;
+            }
+            &.page-spread-3 {
+                width: @page-width * 2;
+                left: @page-width * 4 + @viewport-padding * 3;
+            }
+        }
+    }
+}
+
+#dlBtnWrapper {
+    z-index: 50;
+    display: none;
+
+    top: 20px;
+    right: 20px;
+    position: absolute;
+}

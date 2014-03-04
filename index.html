@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/madeyna.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,13 +16,54 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="js/holder.js"></script>
 </head>
 <body>
-<div class="container">
-    <h1>Hello, world!</h1>
-</div>
-
+<section id="mainVisual" class="holderjs">
+    <header>
+        <h1></h1>
+    </header>
+</section>
+<section id="buttons">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-2 col-sm-3 col-sm-offset-3 col-md-2 col-md-offset-4">
+                <button id="btnView" class="btn btn-primary">パンフレットを見る</button>
+                <p class="text-muted">200KB</p>
+            </div>
+            <div class="col-xs-4 col-sm-3 col-md-2">
+                <a href="#" class="btn btn-primary" role="button">ダウンロードする</a>
+                <p class="text-muted">200KB</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-muted">ファイルサイズが大きいのでご注意ください。</p>
+            </div>
+        </div>
+    </div>
+</section>
+<main id="viewport">
+    <div class="pages">
+        <div class="page-spread page-spread-1">
+            <div class="page page-1 holderjs"></div>
+        </div>
+        <div class="page-spread page-spread-2">
+            <div class="page page-2 holderjs"></div>
+            <div class="page page-3 holderjs"></div>
+            <div class="page page-4 holderjs"></div>
+        </div>
+        <div class="page-spread page-spread-3">
+            <div class="page page-5 holderjs"></div>
+            <div class="page page-6 holderjs"></div>
+        </div>
+    </div>
+</main>
+<section id="dlBtnWrapper">
+    <a href="#" class="btn btn-primary" role="button">ダウンロードする</a>
+</section>
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/madeyna.js"></script>
 </body>
 </html>
