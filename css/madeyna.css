@@ -6,7 +6,7 @@ body {
 }
 #mainVisual {
   z-index: 100;
-  background-image: url("?holder.js/1400x400/vine/text:Madeyna Market");
+  background-image: url("?holder.js/1400x400/text:Image");
   background-size: cover !important;
   background-repeat: no-repeat;
   background-position: center center;
@@ -21,7 +21,7 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #mainVisual {
-    background-image: url("?holder.js/2800x800/vine/text:Madeyna Market");
+    background-image: url("?holder.js/2800x800/text:Image");
     background-size: 1400 400;
   }
 }
@@ -108,51 +108,51 @@ body {
 }
 #viewport .pages .page-spread .page.page-1 {
   left: 0;
-  background-image: url("?holder.js/1000x1400/sky/text:Page 1");
+  background-image: url("?holder.js/1000x1400/text:Page 1");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-1 {
-    background-image: url("?holder.js/2000x2800/sky/text:Page 1");
+    background-image: url("?holder.js/2000x2800/text:Page 1");
     background-size: 1000px 1400px;
   }
 }
 #viewport .pages .page-spread .page.page-2 {
   left: 0;
-  background-image: url("?holder.js/1000x1400/lava/text:Page 2");
+  background-image: url("?holder.js/1000x1400/sky/text:Page 2");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-2 {
-    background-image: url("?holder.js/2000x2800/lava/text:Page 2");
+    background-image: url("?holder.js/2000x2800/sky/text:Page 2");
     background-size: 1000px 1400px;
   }
 }
 #viewport .pages .page-spread .page.page-3 {
   left: 1000px;
-  background-image: url("?holder.js/1000x1400/vine/text:Page 3");
+  background-image: url("?holder.js/1000x1400/text:Page 3");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-3 {
-    background-image: url("?holder.js/2000x2800/vine/text:Page 3");
+    background-image: url("?holder.js/2000x2800/text:Page 3");
     background-size: 1000px 1400px;
   }
 }
 #viewport .pages .page-spread .page.page-4 {
   left: 2000px;
-  background-image: url("?holder.js/1000x1400/industrial/text:Page 4");
+  background-image: url("?holder.js/1000x1400/vine/text:Page 4");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-4 {
-    background-image: url("?holder.js/2000x2800/industrial/text:Page 4");
+    background-image: url("?holder.js/2000x2800/vine/text:Page 4");
     background-size: 1000px 1400px;
   }
 }
 #viewport .pages .page-spread .page.page-5 {
   left: 0;
-  background-image: url("?holder.js/1000x1400/social/text:Page 5");
+  background-image: url("?holder.js/1000x1400/text:Page 5");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #viewport .pages .page-spread .page.page-5 {
-    background-image: url("?holder.js/2000x2800/social/text:Page 5");
+    background-image: url("?holder.js/2000x2800/text:Page 5");
     background-size: 1000px 1400px;
   }
 }
