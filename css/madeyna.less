@@ -54,9 +54,9 @@
     filter: ~"alpha(opacity=@{opacity-ie})";
 }
 
-@page-width: 1200px;
-@page-height: 1698px;
-@viewport-padding: 50px;
+@page-width: 800px;
+@page-height: 1132px;
+@viewport-padding: 40px;
 
 @page-width-wo-unit: unit(@page-width);
 @page-height-wo-unit: unit(@page-height);
@@ -65,8 +65,9 @@
 @holderjs-option: "@{page-width-wo-unit}x@{page-height-wo-unit}";
 @holderjs-option-2x: "@{page-width-2x-wo-unit}x@{page-height-2x-wo-unit}";
 
-@title-width: 555px;
-@title-height: 103px;
+@title-width: 780px;
+@title-height: 145px;
+@title-width-wo-unit: unit(@title-width);
 
 html {
     height: 100%;
@@ -78,11 +79,10 @@ body {
 
 #mainVisual {
     z-index: 100;
-    // background-image: url(../images/sakura.jpg);
-    // background-size: cover;
+    background-image: url(../images/sakura.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    top: 0;
     width: 100%;
     height: 60%;
     position: absolute;
@@ -106,10 +106,11 @@ body {
             & > .container {
                 & > .row {
                     & > div {
-                        background-image: url(../images/title_555.png);
+                        background-image: url("../images/title_@{title-width-wo-unit}.png");
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center center;
+                        text-indent: -10000px;
                     }
                 }
             }
