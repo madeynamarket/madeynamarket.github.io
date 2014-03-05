@@ -54,8 +54,8 @@
     filter: ~"alpha(opacity=@{opacity-ie})";
 }
 
-@page-width: 768px;
-@page-height: 1088px;
+@page-width: 1200px;
+@page-height: 1698px;
 @viewport-padding: 50px;
 
 @page-width-wo-unit: unit(@page-width);
@@ -64,6 +64,9 @@
 @page-height-2x-wo-unit: unit(@page-height * 2);
 @holderjs-option: "@{page-width-wo-unit}x@{page-height-wo-unit}";
 @holderjs-option-2x: "@{page-width-2x-wo-unit}x@{page-height-2x-wo-unit}";
+
+@title-width: 555px;
+@title-height: 103px;
 
 html {
     height: 100%;
@@ -75,8 +78,8 @@ body {
 
 #mainVisual {
     z-index: 100;
-    .img-retina("?holder.js/1400x400/text:Image", "?holder.js/2800x800/text:Image", 1400, 400);
-    background-size: cover !important;
+    // background-image: url(../images/sakura.jpg);
+    // background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     top: 0;
@@ -84,20 +87,32 @@ body {
     height: 60%;
     position: absolute;
     .transition-transform(0.5s ease-in);
+    margin: 0;
 
-    header {
+    & > header {
         position: absolute;
         width: 100%;
         top: 50%;
         left: 0;
+        margin: 0;
 
-        h1 {
+        & > h1 {
             position: relative;
-            top: -1em;
-            height: 2em;
-            line-height: 2em;
+            top: -@title-height / 2;
+            height: @title-height;
+            line-height: @title-height;
             margin: 0;
-            text-align: center;
+
+            & > .container {
+                & > .row {
+                    & > div {
+                        background-image: url(../images/title_555.png);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+                }
+            }
         }
     }
 
@@ -156,41 +171,10 @@ body {
             height: @page-height;
             top: @viewport-padding;
             position: absolute;
-            .box-shadow(0 2px 6px rgba(0,0,0,.25));
+            .box-shadow(0 3px 9px rgba(0,0,0,.5));
             .opacity(0);
             .transition(opacity 0.5s);
 
-            .page {
-                width: @page-width;
-                height: @page-height;
-                top: 0;
-                position: absolute;
-                &.page-1 {
-                    left: 0;
-                    .img-retina("?holder.js/@{holderjs-option}/text:Page 1", "?holder.js/@{holderjs-option-2x}/text:Page 1", @page-width, @page-height);
-                }
-                &.page-2 {
-                    left: 0;
-                    .img-retina("?holder.js/@{holderjs-option}/sky/text:Page 2", "?holder.js/@{holderjs-option-2x}/sky/text:Page 2", @page-width, @page-height);
-                }
-                &.page-3 {
-                    left: @page-width;
-                    .img-retina("?holder.js/@{holderjs-option}/text:Page 3", "?holder.js/@{holderjs-option-2x}/text:Page 3", @page-width, @page-height);
-                }
-                &.page-4 {
-                    left: @page-width * 2;
-                    .img-retina("?holder.js/@{holderjs-option}/vine/text:Page 4", "?holder.js/@{holderjs-option-2x}/vine/text:Page 4", @page-width, @page-height);
-                }
-                &.page-5 {
-                    left: 0;
-                    .img-retina("?holder.js/@{holderjs-option}/text:Page 5", "?holder.js/@{holderjs-option-2x}/text:Page 5", @page-width, @page-height);
-                }
-                &.page-6 {
-                    left: @page-width;
-                    .img-retina("?holder.js/@{holderjs-option}/sky/text:Page 6", "?holder.js/@{holderjs-option-2x}/sky/text:Page 6", @page-width, @page-height);
-                }
-            }
-            
             &.fadeIn {
                 .opacity(1);
             }
@@ -206,6 +190,40 @@ body {
             &.page-spread-3 {
                 width: @page-width * 2;
                 left: @page-width * 4 + @viewport-padding * 3;
+            }
+
+            .thumb {
+                width: @page-width;
+                height: @page-height;
+                top: 0;
+                position: absolute;
+                background-size: @page-width, @page-height;
+                background-color: #fff;
+
+                .page {
+                    width: 100%;
+                    height: 100%;
+                    background-size: @page-width, @page-height;
+
+                }
+                &.thumb-1 {
+                    left: 0;
+                }
+                &.thumb-2 {
+                    left: 0;
+                }
+                &.thumb-3 {
+                    left: @page-width;
+                }
+                &.thumb-4 {
+                    left: @page-width * 2;
+                }
+                &.thumb-5 {
+                    left: 0;
+                }
+                &.thumb-6 {
+                    left: @page-width;
+                }
             }
         }
     }

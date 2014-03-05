@@ -19,9 +19,15 @@
     <script src="js/holder.js"></script>
 </head>
 <body>
-<section id="mainVisual" class="holderjs">
+<section id="mainVisual">
     <header>
-        <h1>までいなマーケット</h1>
+        <h1>
+            <header class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-sm-6 col-sm-offset-3 text-center">HTML5ラボ</div>
+                </div>
+            </header>
+        </h1>
     </header>
 </section>
 <section id="buttons">
@@ -29,7 +35,7 @@
         <div class="row">
             <div class="col-xs-6 col-sm-3 col-sm-offset-3 col-md-2 col-md-offset-4">
                 <button id="btnView" class="btn btn-primary">パンフレットを見る</button>
-                <p class="text-muted">200KB</p>
+                <p class="text-muted">3.5MB</p>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-2">
                 <a href="#" class="btn btn-primary" role="button">ダウンロードする</a>
@@ -46,16 +52,28 @@
 <main id="viewport">
     <div class="pages">
         <div class="page-spread page-spread-1">
-            <div class="page page-1 holderjs"></div>
+            <div class="thumb thumb-1" data-src="images/madeyna2014_omote_01_thumb.jpg">
+                <div class="page page-1" data-src="images/madeyna2014_omote_01.jpg"></div>
+            </div>
         </div>
         <div class="page-spread page-spread-2">
-            <div class="page page-2 holderjs"></div>
-            <div class="page page-3 holderjs"></div>
-            <div class="page page-4 holderjs"></div>
+            <div class="thumb thumb-2" data-src="images/madeyna2014_ura_01_thumb.jpg">
+                <div class="page page-2" data-src="images/madeyna2014_ura_01.jpg"></div>
+            </div>
+            <div class="thumb thumb-3" data-src="images/madeyna2014_ura_02_thumb.jpg">
+                <div class="page page-3" data-src="images/madeyna2014_ura_02.jpg"></div>
+            </div>
+            <div class="thumb thumb-4" data-src="images/madeyna2014_ura_03_thumb.jpg">
+                <div class="page page-4" data-src="images/madeyna2014_ura_03.jpg"></div>
+            </div>
         </div>
         <div class="page-spread page-spread-3">
-            <div class="page page-5 holderjs"></div>
-            <div class="page page-6 holderjs"></div>
+            <div class="thumb thumb-5" data-src="images/madeyna2014_omote_02_thumb.jpg">
+                <div class="page page-5" data-src="images/madeyna2014_omote_02.jpg"></div>
+            </div>
+            <div class="thumb thumb-6" data-src="images/madeyna2014_omote_03_thumb.jpg">
+                <div class="page page-6" data-src="images/madeyna2014_omote_03.jpg"></div>
+            </div>
         </div>
     </div>
 </main>

@@ -6,8 +6,6 @@ body {
 }
 #mainVisual {
   z-index: 100;
-  background-image: url("?holder.js/1400x400/text:Image");
-  background-size: cover !important;
   background-repeat: no-repeat;
   background-position: center center;
   top: 0;
@@ -18,26 +16,27 @@ body {
   -moz-transition: -moz-transform 0.5s ease-in;
   -o-transition: -o-transform 0.5s ease-in;
   transition: transform 0.5s ease-in;
+  margin: 0;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  #mainVisual {
-    background-image: url("?holder.js/2800x800/text:Image");
-    background-size: 1400 400 !important;
-  }
-}
-#mainVisual header {
+#mainVisual > header {
   position: absolute;
   width: 100%;
   top: 50%;
   left: 0;
-}
-#mainVisual header h1 {
-  position: relative;
-  top: -1em;
-  height: 2em;
-  line-height: 2em;
   margin: 0;
-  text-align: center;
+}
+#mainVisual > header > h1 {
+  position: relative;
+  top: -51.5px;
+  height: 103px;
+  line-height: 103px;
+  margin: 0;
+}
+#mainVisual > header > h1 > .container > .row > div {
+  background-image: url(../images/title_555.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 #mainVisual.slideUp {
   -webkit-transform: translate3d(0, -100%, 0);
@@ -85,102 +84,67 @@ body {
 }
 #viewport .pages {
   top: 0;
-  width: 4808px;
-  height: 1188px;
+  width: 7400px;
+  height: 1798px;
   position: absolute;
 }
 #viewport .pages .page-spread {
-  height: 1088px;
+  height: 1698px;
   top: 50px;
   position: absolute;
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
-}
-#viewport .pages .page-spread .page {
-  width: 768px;
-  height: 1088px;
-  top: 0;
-  position: absolute;
-}
-#viewport .pages .page-spread .page.page-1 {
-  left: 0;
-  background-image: url("?holder.js/768x1088/text:Page 1");
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  #viewport .pages .page-spread .page.page-1 {
-    background-image: url("?holder.js/1536x2176/text:Page 1");
-    background-size: 768px 1088px !important;
-  }
-}
-#viewport .pages .page-spread .page.page-2 {
-  left: 0;
-  background-image: url("?holder.js/768x1088/sky/text:Page 2");
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  #viewport .pages .page-spread .page.page-2 {
-    background-image: url("?holder.js/1536x2176/sky/text:Page 2");
-    background-size: 768px 1088px !important;
-  }
-}
-#viewport .pages .page-spread .page.page-3 {
-  left: 768px;
-  background-image: url("?holder.js/768x1088/text:Page 3");
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  #viewport .pages .page-spread .page.page-3 {
-    background-image: url("?holder.js/1536x2176/text:Page 3");
-    background-size: 768px 1088px !important;
-  }
-}
-#viewport .pages .page-spread .page.page-4 {
-  left: 1536px;
-  background-image: url("?holder.js/768x1088/vine/text:Page 4");
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  #viewport .pages .page-spread .page.page-4 {
-    background-image: url("?holder.js/1536x2176/vine/text:Page 4");
-    background-size: 768px 1088px !important;
-  }
-}
-#viewport .pages .page-spread .page.page-5 {
-  left: 0;
-  background-image: url("?holder.js/768x1088/text:Page 5");
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  #viewport .pages .page-spread .page.page-5 {
-    background-image: url("?holder.js/1536x2176/text:Page 5");
-    background-size: 768px 1088px !important;
-  }
-}
-#viewport .pages .page-spread .page.page-6 {
-  left: 768px;
-  background-image: url("?holder.js/768x1088/sky/text:Page 6");
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  #viewport .pages .page-spread .page.page-6 {
-    background-image: url("?holder.js/1536x2176/sky/text:Page 6");
-    background-size: 768px 1088px !important;
-  }
 }
 #viewport .pages .page-spread.fadeIn {
   opacity: 1;
   filter: alpha(opacity=100);
 }
 #viewport .pages .page-spread.page-spread-1 {
-  width: 768px;
+  width: 1200px;
   left: 50px;
 }
 #viewport .pages .page-spread.page-spread-2 {
-  width: 2304px;
-  left: 868px;
+  width: 3600px;
+  left: 1300px;
 }
 #viewport .pages .page-spread.page-spread-3 {
-  width: 1536px;
-  left: 3222px;
+  width: 2400px;
+  left: 4950px;
+}
+#viewport .pages .page-spread .thumb {
+  width: 1200px;
+  height: 1698px;
+  top: 0;
+  position: absolute;
+  background-size: 1200px, 1698px;
+  background-color: #fff;
+}
+#viewport .pages .page-spread .thumb .page {
+  width: 100%;
+  height: 100%;
+  background-size: 1200px, 1698px;
+}
+#viewport .pages .page-spread .thumb.thumb-1 {
+  left: 0;
+}
+#viewport .pages .page-spread .thumb.thumb-2 {
+  left: 0;
+}
+#viewport .pages .page-spread .thumb.thumb-3 {
+  left: 1200px;
+}
+#viewport .pages .page-spread .thumb.thumb-4 {
+  left: 2400px;
+}
+#viewport .pages .page-spread .thumb.thumb-5 {
+  left: 0;
+}
+#viewport .pages .page-spread .thumb.thumb-6 {
+  left: 1200px;
 }
 #dlBtnWrapper {
   z-index: 50;
